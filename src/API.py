@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from ctypes import Union
 
 import requests
 
@@ -43,8 +42,9 @@ class HH(Parser):
                     return f"Возможная причина {response.reason}"
             return vacancies
 
-    def expectation(self, vacancies, file_worker):
+    def expectation(self, file_worker, keywords):
         """ Метод формирование в список, а так же проверка на пустую или нулевую зп """
+        vacancies = self.load_vacancies(keywords)
         total = []
         top_n = file_worker[1]
         for vac in vacancies:
