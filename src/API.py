@@ -42,9 +42,9 @@ class HH(Parser):
                     return f"Возможная причина {response.reason}"
             return vacancies
 
-    def expectation(self, file_worker, keywords):
+    def expectation(self, file_worker):
         """ Метод формирование в список, а так же проверка на пустую или нулевую зп """
-        vacancies = self.load_vacancies(keywords)
+        vacancies = self.load_vacancies(file_worker[2])
         total = []
         top_n = file_worker[1]
         for vac in vacancies:
@@ -60,6 +60,8 @@ class HH(Parser):
             if len(total) == top_n:
                 total.append(vacancy_total)
         return total
+
+    # def total(self):
 
 
 

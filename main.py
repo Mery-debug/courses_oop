@@ -12,5 +12,5 @@ def user_info() -> list:
 
 
 if __name__ == '__main__':
-    hh_example = HH()
-    print()
+    hh_example = HH(user_info()).load_vacancies(user_info())
+    print(hh_example)
