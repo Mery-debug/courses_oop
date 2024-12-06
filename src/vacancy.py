@@ -30,7 +30,7 @@ class ProcessingVacancies:
     def sort_for_top_n_vacancies(self):
         """Метод для сортировки по убыванию списка вакансий"""
         total = sorted(self._total, reverse=True)
-        return total[:self._top_n]
+        return total[:int(self._top_n)]
 
 
 
