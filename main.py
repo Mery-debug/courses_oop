@@ -3,9 +3,9 @@ from src.API import HH
 
 def user_info() -> list:
     """ Функция для взаимодействия с пользователем """
-    name = input("Введите поисковой запрос: ")
+    keywords = input("Введите поисковой запрос: ")
     top_n = int(input("Введите количество вакансий для вывода в топ N: "))
-    keywords = input("Введите ключевые слова для фильтрации вакансий: ").lower().split(',')
+    name = input("Введите ключевые слова для фильтрации вакансий: ").lower().split(',')
     pay = input("Введите диапазон зарплат: ")
     lst = [name, top_n, keywords, pay]
     return lst

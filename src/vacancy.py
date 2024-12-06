@@ -17,10 +17,25 @@ class ProcessingVacancies:
 
     def __gt__(self, other):
         """Магический метод сравнения в большую сторону по зп"""
-        var = 0
+        tota = []
         for total in self._total:
-            total["pay"] = other.pay
+            total["pay"] = int(other.pay)
             var = self._pay > other.pay
-        return var
+            if var == self._pay:
+                self._total = tota.append(total)
+                return self._total
+            else:
+                return f'Вакансия не подходит по диапазону зп'
+
+    def sort_for_top_n_vacancies(self):
+        """Метод для сортировки по убыванию списка вакансий"""
+        total = sorted(self._total, reverse=True)
+        return total[:self._top_n]
+
+
+
+
+
+
 
 
