@@ -45,7 +45,7 @@ class HH(Parser):
                     return f"Возможная причина {response.reason}"
         return vacancies
 
-    def expectation(self, file_worker: list, vacancies: dict):
+    def expectation(self, file_worker: list, vacancies: list[dict]):
         """ Метод формирование в список, а так же проверка на пустую или нулевую зп """
         total = []
         for vac in vacancies:
