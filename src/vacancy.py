@@ -27,8 +27,8 @@ class ProcessingVacancies:
     def sort_for_top_n_vacancies(self, tota):
         """Метод для сортировки по убыванию списка вакансий"""
         lst = [tot.get('pay') for tot in tota]
-
-        return total[:int(self._top_n)]
+        pass
+        # return total[:int(self._top_n)]
 
 
 
