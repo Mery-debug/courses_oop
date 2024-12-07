@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import pytest
 
 
@@ -222,3 +224,8 @@ def vacancy() -> list[dict]:
 @pytest.fixture
 def lst() -> list:
     return ['python', 5, 'junior', '50000-10000']
+
+
+@pytest.fixture
+def file_name() -> str:
+    return '../../data/tests.json'

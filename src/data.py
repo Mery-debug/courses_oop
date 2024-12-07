@@ -1,7 +1,6 @@
 import json
 from abc import ABC, abstractmethod
-
-from src.vacancy import ProcessingVacancies
+from pathlib import Path
 
 
 class BaseJsonVacancy(ABC):
