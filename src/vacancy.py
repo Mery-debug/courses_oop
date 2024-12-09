@@ -24,16 +24,10 @@ class ProcessingVacancies:
                 tota.append(total)
         return tota
 
-    def sort_for_top_n_vacancies(self, tota):
+    def sort_for_top_n_vacancies(self, tota: list[dict]) -> list[dict]:
         """Метод для сортировки по убыванию списка вакансий"""
-        lst = [tot.get('pay') for tot in tota]
-        pass
-        # return total[:int(self._top_n)]
+        sorted_tota = sorted(tota, key=lambda x: x.get('pay', 0), reverse=True)
+        return sorted_tota[:int(self._top_n)]
 
-
-
-
-
-
-
-
+    def __str__(self):
+        return f'{ProcessingVacancies}'

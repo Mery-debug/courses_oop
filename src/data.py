@@ -30,15 +30,17 @@ class ReadJson(BaseJsonVacancy):
     def dict_to_json(self, vacancy: list[dict], file_name: str) -> str:
         """Метод для записи данных в файл json"""
         total_vac = []
+        try:
+            with open(file_name, "r", encoding='utf-8') as json_file:
+                total_vac = json.load(json_file)
+        except FileNotFoundError:
+            total_vac = []
         for vacanc in vacancy:
-            with open(file_name, "a+", encoding='utf-8') as json_file:
-                json_obj = json.dumps(vacanc)
-                if json_obj not in json_file:
-                    total_vac.append(json_obj)
-                    json_file.write(json_obj)
-                    json_file.close()
-                else:
-                    continue
+            if vacanc not in total_vac:
+                total_vac.append(vacanc)
+        with open(file_name, "w", encoding='utf-8') as json_file:
+            json.dump(total_vac, json_file, ensure_ascii=False, indent=4)
+
         return f'Запись прошла успешно, новые вакансии: {total_vac} добавлены в файл'
 
     def read_file(self, file_name: str) -> str:

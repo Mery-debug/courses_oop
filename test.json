@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Data Architect",
+        "description": "Степень бакалавра в области компьютерных наук, инженерии, бизнеса или смежной области. Не менее 10 лет практического опыта проектирования, разработки и...",
+        "url": "https://api.hh.ru/vacancies/110627398?host=hh.ru",
+        "pay": 588000
+    },
+    {
+        "name": "Go-разработчик (Middle)",
+        "description": "Понимание принципов асинхронного программирования и опыт работы с очередями сообщений (например, Kafka, RabbitMQ). Знание других языков программирования, таких как <highlighttext>Python</highlighttext>...",
+        "url": "https://api.hh.ru/vacancies/110594444?host=hh.ru",
+        "pay": 400000
+    },
+    {
+        "name": "Middle/Middle+ Data Engineer",
+        "description": "...C++ и интеграции с <highlighttext>Python</highlighttext> для повышения производительности. Знание pybind11 или других инструментов для вызова C++ кода из <highlighttext>Python</highlighttext>.",
+        "url": "https://api.hh.ru/vacancies/111875669?host=hh.ru",
+        "pay": 300000
+    },
+    {
+        "name": "Разработчик С/С++",
+        "description": "Oпыт оптимизации кода (как платформонезависимой, так и ориентированной на конкретное \"железо\"). Знание скриптовых языков (<highlighttext>Python</highlighttext>, Shell, Perl, etc.). ",
+        "url": "https://api.hh.ru/vacancies/110798257?host=hh.ru",
+        "pay": 250000
+    }
+]
