@@ -1,7 +1,6 @@
 import json
 import os
 from abc import ABC, abstractmethod
-from pathlib import Path
 
 
 class BaseJsonVacancy(ABC):
@@ -32,24 +31,21 @@ class ReadJson(BaseJsonVacancy):
         """Метод для записи данных в файл json"""
         file_name = f"data/{file_path}"
         path = os.path.abspath(file_name)
-        try:
-            with open(path, "r", encoding='utf-8') as json_file:
-                total_vac = json.load(json_file)
-        except FileNotFoundError:
-            total_vac = []
+        with open(path, "r", encoding="utf-8") as json_file:
+            total_vac = json.load(json_file)
         for vacanc in vacancy:
             if vacanc not in total_vac:
                 total_vac.append(vacanc)
-        with open(path, "w+", encoding='utf-8') as json_file:
+        with open(path, "w+", encoding="utf-8") as json_file:
             json.dump(total_vac, json_file, ensure_ascii=False, indent=4)
 
-        return f'Запись прошла успешно, новые вакансии: {total_vac} добавлены в файл'
+        return f"Запись прошла успешно, новые вакансии: {total_vac} добавлены в файл"
 
     def read_file(self, file_path: str) -> str:
         """Метод для чтения файла с json"""
         file_name = f"data/{file_path}"
         path = os.path.abspath(file_name)
-        with open(path, "r+", encoding='utf-8') as file:
+        with open(path, "r+", encoding="utf-8") as file:
             json_file = file.read()
             return json_file
 
@@ -57,12 +53,11 @@ class ReadJson(BaseJsonVacancy):
         """Метод для удаления содержимого файла"""
         file_name = f"data/{file_path}"
         path = os.path.abspath(file_name)
-        with open(path, "r+", encoding='utf-8') as f:
+        with open(path, "r+", encoding="utf-8") as f:
             f.truncate(0)
-            return f'Файл {file_name}, полностью очищен'
+            return f"Файл {file_name}, полностью очищен"
 
     def __str__(self) -> str:
         file_name = f"{self.file_path}"
         path = os.path.abspath(file_name)
-        return f'Запись производиться в файл {file_name}, полный путь {path}'
-
+        return f"Запись производиться в файл {file_name}, полный путь {path}"

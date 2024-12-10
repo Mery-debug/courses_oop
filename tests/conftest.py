@@ -1,5 +1,4 @@
 import os
-from pathlib import Path
 
 import pytest
 
@@ -72,10 +71,10 @@ def vacancy() -> list[dict]:
             },
             "snippet": {
                 "requirement": "Встроенные в Excel инструменты извлечения, подготовки, обработки данных PowerQuery, "
-                               "PowerPivot. - VBA или <highlighttext>Python</highlighttext>, умение создавать макросы. - "
-                               "PowerBI - загрузка данных, создание...",
+                "PowerPivot. - VBA или <highlighttext>Python</highlighttext>, умение создавать макросы. - "
+                "PowerBI - загрузка данных, создание...",
                 "responsibility": "Использование DAX в данных Excel и PowerBI. - Построение запросов на SQL. - "
-                                  "<highlighttext>Python</highlighttext> для задач сбора и анализа данных.",
+                "<highlighttext>Python</highlighttext> для задач сбора и анализа данных.",
             },
             "contacts": None,
             "schedule": {"id": "fullDay", "name": "Полный день"},
@@ -144,10 +143,10 @@ def vacancy() -> list[dict]:
             },
             "snippet": {
                 "requirement": "IT образование (высшее). Не менее 1 года опыт работы системного администрирования: "
-                               "выполнение задач по настройке ПО, в качестве специалиста технической...",
+                "выполнение задач по настройке ПО, в качестве специалиста технической...",
                 "responsibility": "...IBM_SPSS, MatLab, GIMP, DaVinci Resolve, Darktable, Anaconda, Delphi7, "
-                                  "Visual Studio, OBS Studio, <highlighttext>Python</highlighttext>, Virtual Box ) и "
-                                  "систем электронного документооборота.",
+                "Visual Studio, OBS Studio, <highlighttext>Python</highlighttext>, Virtual Box ) и "
+                "систем электронного документооборота.",
             },
             "contacts": None,
             "schedule": {"id": "fullDay", "name": "Полный день"},
@@ -202,9 +201,10 @@ def vacancy() -> list[dict]:
             },
             "snippet": {
                 "requirement": "Уверенное владение Excel, <highlighttext>Python</highlighttext>, SQL. Опыт разработки "
-                               "ETL/ELT. Знание инструментов BI. Знание подходов Agile/Scrum.",
-                "responsibility": "Выявлять требования к данным, сценарии их использования и анализа в КХД и отчетности в "
-                                  "тесном взаимодействии с бизнес-подразделениями. ",
+                "ETL/ELT. Знание инструментов BI. Знание подходов Agile/Scrum.",
+                "responsibility": "Выявлять требования к данным, сценарии их использования и анализа в КХД и "
+                                  "отчетности в "
+                "тесном взаимодействии с бизнес-подразделениями. ",
             },
             "contacts": None,
             "schedule": {"id": "fullDay", "name": "Полный день"},
@@ -219,21 +219,31 @@ def vacancy() -> list[dict]:
             "adv_response_url": None,
             "is_adv_vacancy": False,
             "adv_context": None,
-        }]
+        },
+    ]
 
 
 @pytest.fixture
 def lst() -> list:
-    return ['python', 5, 'junior', '50000-10000']
+    return ["python", 5, "junior", "50000-10000"]
 
 
 @pytest.fixture
 def file_name() -> str:
-    return 'test.json'
+    return "test.json"
 
 
 @pytest.fixture()
 def path() -> str:
-    file_name = f"test.json"
+    file_name = "test.json"
     path = os.path.abspath(file_name)
-    return f'Запись производиться в файл {file_name}, полный путь {path}'
+    return f"Запись производиться в файл {file_name}, полный путь {path}"
+
+
+@pytest.fixture()
+def result_1() -> str:
+    vacancies = [
+        {"personal": "Jhon doe", "payment": "50000"},
+        {"personal": "Jisus", "payment": "100000"},
+    ]
+    return f"Запись прошла успешно, новые вакансии: {vacancies} добавлены в файл"

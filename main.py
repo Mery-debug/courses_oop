@@ -194,12 +194,11 @@ if __name__ == '__main__':
     vacancy_1 = ProcessingVacancies(lst_dct, 4, ['python'], '50000')
     gt = vacancy_1.__gt__(50000)
     sort = vacancy_1.sort_for_top_n_vacancies(gt)
-    # j = ReadJson(lst_dct)
     json = ReadJson('tests.json', sort)
     json_in_file = json.dict_to_json(sort, 'test.json')
     read = json.read_file('tests.json')
     j = ReadJson('test.json', lst_dct)
-    print(j)
+    print(json_in_file)
 
 
 
