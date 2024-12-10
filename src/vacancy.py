@@ -1,9 +1,3 @@
-# from main import user_info
-# from src.API import HH
-
-# example = user_info()
-# hh_example_1 = HH(example).expectation(example, HH(example).load_vacancies(example))
-
 
 class ProcessingVacancies:
     """Класс обработки вакансий из полученного в АПИ результата, сравнение по зп, топ n и ключевые слова"""
