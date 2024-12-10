@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 import pytest
@@ -228,4 +229,11 @@ def lst() -> list:
 
 @pytest.fixture
 def file_name() -> str:
-    return '../../data/tests.json'
+    return 'test.json'
+
+
+@pytest.fixture()
+def path() -> str:
+    file_name = f"test.json"
+    path = os.path.abspath(file_name)
+    return f'Запись производиться в файл {file_name}, полный путь {path}'

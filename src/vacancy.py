@@ -30,4 +30,4 @@ class ProcessingVacancies:
         return sorted_tota[:int(self._top_n)]
 
     def __str__(self):
-        return f'{ProcessingVacancies}'
+        return f'ProcessingVacancies ({self._total}, {self._top_n}, {self._keywords}, {self._pay})'

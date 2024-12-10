@@ -61,6 +61,8 @@ class HH(Parser):
                 continue
         return total
 
+    def __str__(self):
+        return f'HH ({self._url}, {self._headers}, {self._params}, {self._vacancies})'
 
 
 
