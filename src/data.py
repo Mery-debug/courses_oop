@@ -46,8 +46,7 @@ class ReadJson(BaseJsonVacancy):
         file_name = f"data/{file_path}"
         path = os.path.abspath(file_name)
         with open(path, "r+", encoding="utf-8") as file:
-            json_file = file.read()
-            return json_file
+            return file.read()
 
     def del_all(self, file_path: str) -> str:
         """Метод для удаления содержимого файла"""

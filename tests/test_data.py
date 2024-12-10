@@ -1,17 +1,18 @@
+import json
 import os
 
 from src.data import ReadJson
 
 
-def test_dict_to_json() -> None:
+def test_dict_to_json(result_1: str) -> None:
     """
     Тест для проверки метода, который заданный словарь преобразует в json-файл (запускается только из корня)
     """
     vacancies = [
         {"personal": "Jhon doe", "payment": "50000"},
-        {"personal": "Jisus", "payment": "100000"},
+        {"personal": "Jisus", "payment": "100000"}
     ]
-    assert ReadJson("tests.json", vacancies).dict_to_json(vacancies, "tests.json") == f'Запись прошла успешно, новые вакансии: {vacancies} добавлены в файл'
+    assert ReadJson("tests.json", vacancies).dict_to_json(vacancies, "tests.json") == result_1
 
 
 def test_str_json(vacancy: list[dict], file_name: str, path: str) -> None:
@@ -32,6 +33,8 @@ def test_del_all() -> None:
     result = "Файл data/tests_1.json, полностью очищен"
     vacancy = [
         {"personal": "Jhon doe", "payment": "50000"},
-        {"personal": "Jisus", "payment": "100000"},
+        {"personal": "Jisus", "payment": "100000"}
     ]
     assert ReadJson("tests_1.json", vacancy).del_all("tests_1.json") == result
+
+
