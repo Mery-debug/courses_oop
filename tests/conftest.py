@@ -247,3 +247,14 @@ def result_1() -> str:
         {"personal": "Jisus", "payment": "100000"},
     ]
     return f"Запись прошла успешно, новые вакансии: {vacancies} добавлены в файл"
+
+
+@pytest.fixture()
+def total() -> list:
+    return [
+        {"name": " python dev0ps backend", "payment": "50000"},
+        {"name": "junior dev0ps backend", "payment": "20000"},
+        {"name": "junior dev0ps backend", "payment": "20000"},
+        {"name": "Jisupython backend", "payment": "300000"},
+        {"name": "junior", "payment": "100"}
+    ]

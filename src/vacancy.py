@@ -32,7 +32,7 @@ class ProcessingVacancies:
         finish = []
         for tota in sorted_tota:
             for keyw in keywords:
-                if tota.get('name') == keyw:
+                if keyw in tota.get('name'):
                     finish.append(tota)
         return finish
 
