@@ -299,5 +299,35 @@
         "adv_response_url": null,
         "is_adv_vacancy": false,
         "adv_context": null
+    },
+    {
+        "name": "Программист С++ Senior",
+        "description": "Опыт коммерческой разработки на С++ от 5-ти лет. Опыт работы с низкоуровневыми сетями, многопоточностью и асинхронностью. Опыт работы с...",
+        "url": "https://api.hh.ru/vacancies/103767759?host=hh.ru",
+        "pay": 400000
+    },
+    {
+        "name": "Backend-разработчик",
+        "description": "Базовые умения работы с командной строкой linux. Знание NoSQL (Redis, Elasticsearch, Mongo). Знание <highlighttext>Python</highlighttext> (Django, Flask). Умение работать с Docker.​​​​​​​.",
+        "url": "https://api.hh.ru/vacancies/111350974?host=hh.ru",
+        "pay": 350000
+    },
+    {
+        "name": "Data-аналитик в области временных рядов (Middle)",
+        "description": "Уверенные знания <highlighttext>Python</highlighttext> и библиотек для работы с данными (pandas, numpy, scipy, matplotlib, seaborn). Опыт работы с временными рядами и...",
+        "url": "https://api.hh.ru/vacancies/112567513?host=hh.ru",
+        "pay": 270000
+    },
+    {
+        "name": "Ведущий системный администратор",
+        "description": "Хорошее знакомство с системой мониторинга Zabbix. Знание языков сценариев bash, <highlighttext>python</highlighttext>, PowerShell. Понимание принципов работы и опыт настройки IP-телефонии...",
+        "url": "https://api.hh.ru/vacancies/111042674?host=hh.ru",
+        "pay": 200000
+    },
+    {
+        "name": "Старший BI-аналитик",
+        "description": "Высшее техническое образование. Опыт проектирования аналитических хранилищ данных. Опыт работы в роли эксперта по разработке ETL/ELT процессов от 3...",
+        "url": "https://api.hh.ru/vacancies/112393680?host=hh.ru",
+        "pay": 200000
     }
 ]
