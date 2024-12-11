@@ -26,3 +26,14 @@ class ProcessingVacancies:
 
     def __str__(self):
         return f"ProcessingVacancies ({self._total}, {self._top_n}, {self._keywords}, {self._pay})"
+
+    @staticmethod
+    def sort_by_keywords(sorted_tota: list[dict], keywords) -> list:
+        finish = []
+        for tota in sorted_tota:
+            for keyw in keywords:
+                if tota.get('name') == keyw:
+                    finish.append(tota)
+        return finish
+
+
